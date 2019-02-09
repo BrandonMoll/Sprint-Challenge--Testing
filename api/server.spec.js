@@ -38,9 +38,8 @@ describe('The get request', () => {
         expect(response.type).toMatch(/json/i);
     });
 
-    it('returns an array', async () => {
+    it('returns an object?', async () => { 
         const response = await request(server).get('/');
-        console.log('returns an array:', response.body)
         expect(typeof(response.body)).toMatch(/object/i); 
         
     })

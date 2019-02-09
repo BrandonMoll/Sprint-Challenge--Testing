@@ -11,8 +11,7 @@ server.use(express.json());
 server.get('/', (req, res) => {
     db('games')
     .then(rows => {
-        // res.status(200).json(rows)
-        res.send([1,2,3])
+        res.status(200).json(rows)
     })
     .catch(err => {
         res.status(500).json({message: 'error getting games'})
