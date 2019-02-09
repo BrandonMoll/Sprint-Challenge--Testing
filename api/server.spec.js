@@ -38,9 +38,9 @@ describe('The get request', () => {
         expect(response.type).toMatch(/json/i);
     });
 
-    it('returns an object?', async () => { 
+    it('returns an array', async () => { 
         const response = await request(server).get('/');
-        expect(typeof(response.body)).toMatch(/object/i); 
+        expect(response.body).toBeInstanceOf(Array); 
         
     })
 })
